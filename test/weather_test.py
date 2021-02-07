@@ -38,5 +38,5 @@ class Weather(TestCase):
         url = self.host + self.ep_path + "/" + city_code + ".html"
         response = self.client.Get(url=url)
         act_city = response.json()['weatherinfo']['city']
-        print(f'Expect city = {exp_city}, while actual city = {act_city}')
+#         print(f'Expect city = {exp_city}, while actual city = {act_city}')
         self.assertEqual(exp_city, act_city, f'Expect city = {exp_city}, while actual city = {act_city}')
